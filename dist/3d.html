@@ -1,91 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<title>3D Art - Hunter Tortorella</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>3D Art - Hunter Tortorella</title>
 </head>
 <body>
-<header>
+  <header>
     <h1><a href="index.html">Hunter Tortorella</a></h1>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="2d.html">2D Art</a>
-        <a href="3d.html">3D Art</a>
-        <a href="games.html">Games</a>
+      <a href="index.html">Home</a>
+      <a href="2d.html">2D Art</a>
+      <a href="3d.html">3D Art</a>
+      <a href="games.html">Games</a>
     </nav>
-</header>
+  </header>
 
-<main>
+  <main>
     <h2>3D Art Gallery</h2>
     <div id="gallery" class="columns">
-        <figure>
-            <img src="images/3d_1.png" alt="3D Art 1">
-            <figcaption>3D Art 1</figcaption>
-        </figure>
-        <figure>
-            <video src="videos/3d_3.mp4" autoplay muted loop playsinline></video>
-            <figcaption>3D Art 3 (Video)</figcaption>
-        </figure>
-        <figure>
-            <img src="images/3d_2.png" alt="3D Art 2">
-            <figcaption>3D Art 2</figcaption>
-        </figure>
-        <figure>
-            <video src="videos/3d_5.mp4" autoplay muted loop playsinline></video>
-            <figcaption>3D Art 5 (Video)</figcaption>
-        </figure>
+      <figure>
+        <img src="images/3d_1.png" alt="3D Art 1">
+        <figcaption>3D Art 1</figcaption>
+      </figure>
+      <figure>
+        <video src="videos/3d_3.mp4" autoplay muted loop playsinline></video>
+        <figcaption>3D Art 3</figcaption>
+      </figure>
+      <figure>
+        <img src="images/3d_2.png" alt="3D Art 2">
+        <figcaption>3D Art 2</figcaption>
+      </figure>
+      <figure>
+        <video src="videos/3d_5.mp4" autoplay muted loop playsinline></video>
+        <figcaption>3D Art 5</figcaption>
+      </figure>
     </div>
-</main>
+  </main>
 
-<div id="lightbox">
-    <span id="prev">&#10094;</span>
-    <div id="lightbox-content"></div>
-    <span id="next">&#10095;</span>
-</div>
-
-<footer>
+  <footer>
     <p>&copy; 2025 Hunter Tortorella</p>
-</footer>
-
-<script>
-const lightbox = document.getElementById("lightbox");
-const content = document.getElementById("lightbox-content");
-const items = Array.from(document.querySelectorAll('#gallery img, #gallery video'));
-let currentIndex = 0;
-
-function showItem(index) {
-    content.innerHTML = "";
-    const item = items[index].cloneNode(true);
-    if (item.tagName === "VIDEO") {
-        item.controls = true;
-        item.autoplay = true;
-        item.loop = false;
-        item.muted = false;
-    }
-    content.appendChild(item);
-    lightbox.style.display = "flex";
-    currentIndex = index;
-}
-
-items.forEach((item, index) => {
-    item.addEventListener("click", () => showItem(index));
-});
-document.getElementById("prev").addEventListener("click", e => {
-    e.stopPropagation();
-    showItem((currentIndex - 1 + items.length) % items.length);
-});
-document.getElementById("next").addEventListener("click", e => {
-    e.stopPropagation();
-    showItem((currentIndex + 1) % items.length);
-});
-lightbox.addEventListener("click", e => {
-    if (e.target === lightbox) {
-        lightbox.style.display = "none";
-        content.innerHTML = "";
-    }
-});
-</script>
+  </footer>
 </body>
 </html>
