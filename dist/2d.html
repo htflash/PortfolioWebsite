@@ -7,7 +7,6 @@
 <title>2D Art - Hunter Tortorella</title>
 </head>
 <body>
-
 <header>
     <h1><a href="index.html">Hunter Tortorella</a></h1>
     <nav>
@@ -33,44 +32,10 @@
             <img src="images/Art_3.PNG" alt="2D Art 3">
             <figcaption>2D Art 3</figcaption>
         </figure>
-        <figure>
-            <img src="images/Art_4.png" alt="2D Art 3">
-            <figcaption>2D Art 3</figcaption>
-        </figure>
-        <figure>
-            <video src="videos/42 - Whisp DEMO.mp4" loop autoplay muted playsinline></video>
-            <figcaption>2D Animation</figcaption>
-        </figure>
-        <figure>
-            <img src="images/Art_3.PNG" alt="2D Art 3">
-            <figcaption>2D Art 3</figcaption>
-        </figure>
-        <figure>
-        </figure>
-        <figure>
-            <video src="videos/42 - Whisp DEMO.mp4" loop autoplay muted playsinline></video>
-            <figcaption>2D Animation</figcaption>
-        </figure>
-        <figure>
-            <img src="images/Art_3.PNG" alt="2D Art 3">
-            <figcaption>2D Art 3</figcaption>
-        </figure>
-        <figure>
-        </figure>
-        <figure>
-            <video src="videos/42 - Whisp DEMO.mp4" loop autoplay muted playsinline></video>
-            <figcaption>2D Animation</figcaption>
-        </figure>
-        <figure>
-            <img src="images/Art_3.PNG" alt="2D Art 3">
-            <figcaption>2D Art 3</figcaption>
-        </figure>
-        <figure>
-        <!-- Add more figures/images/videos -->
+        <!-- add more figures as needed -->
     </div>
 </main>
 
-<!-- Lightbox -->
 <div id="lightbox">
     <span id="prev">&#10094;</span>
     <div id="lightbox-content"></div>
@@ -88,9 +53,8 @@ const items = Array.from(document.querySelectorAll('#gallery img, #gallery video
 let currentIndex = 0;
 
 function showItem(index) {
-    content.innerHTML = ""; // Clear previous
+    content.innerHTML = "";
     const item = items[index].cloneNode(true);
-
     if (item.tagName === "VIDEO") {
         item.controls = true;
         item.autoplay = true;
@@ -102,31 +66,24 @@ function showItem(index) {
     currentIndex = index;
 }
 
-// Open lightbox
 items.forEach((item, index) => {
     item.addEventListener("click", () => showItem(index));
 });
 
-// Navigate left
-document.getElementById("prev").addEventListener("click", (e) => {
+document.getElementById("prev").addEventListener("click", e => {
     e.stopPropagation();
     showItem((currentIndex - 1 + items.length) % items.length);
 });
-
-// Navigate right
-document.getElementById("next").addEventListener("click", (e) => {
+document.getElementById("next").addEventListener("click", e => {
     e.stopPropagation();
     showItem((currentIndex + 1) % items.length);
 });
-
-// Close on background click
-lightbox.addEventListener("click", (e) => {
+lightbox.addEventListener("click", e => {
     if (e.target === lightbox) {
         lightbox.style.display = "none";
         content.innerHTML = "";
     }
 });
 </script>
-
 </body>
 </html>
