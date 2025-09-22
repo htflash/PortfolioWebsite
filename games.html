@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Games - Hunter Tortorella</title>
+</head>
+<body>
+
+<header>
+    <h1><a href="index.html">Hunter Tortorella</a></h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="2d.html">2D Art</a>
+        <a href="3d.html">3D Art</a>
+        <a href="games.html">Games</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Games Gallery</h2>
+    <div id="gallery">
+        <figure>
+            <video src="images/Games_1.mp4" autoplay muted loop playsinline></video>
+            <figcaption>3D Art 5 (Video)</figcaption>
+        </figure>
+        <figure>
+            <video src="images/Art_2.mov" autoplay muted loop playsinline></video>
+            <figcaption>3D Art 5 (Video)</figcaption>
+        </figure>
+        <figure>
+            <video src="images/Game_3.mov" autoplay muted loop playsinline></video>
+            <figcaption>3D Art 5 (Video)</figcaption>
+        </figure>
+        <!-- Add more figures as needed -->
+    </div>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span id="prev">&#10094;</span>
+  <img id="lightbox-img" src="" alt="">
+  <span id="next">&#10095;</span>
+</div>
+
+<footer>
+    <p>&copy; 2025 Hunter Tortorella</p>
+</footer>
+
+<script>
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const galleryImages = Array.from(document.querySelectorAll('#gallery img'));
+let currentIndex = 0;
+
+// Open lightbox
+galleryImages.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    currentIndex = index;
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'flex';
+  });
+});
+
+// Navigate left
+document.getElementById("prev").addEventListener('click', (e) => {
+  e.stopPropagation();
+  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  lightboxImg.src = galleryImages[currentIndex].src;
+});
+
+// Navigate right
+document.getElementById("next").addEventListener('click', (e) => {
+  e.stopPropagation();
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  lightboxImg.src = galleryImages[currentIndex].src;
+});
+
+// Close lightbox when clicking background
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox || e.target === lightboxImg) {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+  }
+});
+</script>
+
+</body>
+
