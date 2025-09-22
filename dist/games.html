@@ -5,6 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Games - Hunter Tortorella</title>
+  <style>
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 5%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #cb78ac; /* accent-light */
+      margin-bottom: 2rem;
+    }
+
+    .game-section {
+      margin-bottom: 3rem;
+      background: linear-gradient(145deg, #354f52, #2f3e46);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .game-video {
+      width: 100%;
+      max-height: 600px;
+      border-radius: 12px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .game-video:hover {
+      transform: scale(1.02);
+    }
+
+    .game-description {
+      margin-top: 1rem;
+      color: #cad2c5; /* text */
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Optional: Fullscreen button for video */
+    .game-video::-webkit-media-controls-fullscreen-button {
+      display: block;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -14,25 +60,35 @@
       <a href="2d.html">2D Art</a>
       <a href="3d.html">3D Art</a>
       <a href="games.html">Games</a>
+      <a href="aboutme.html">About Me</a>
     </nav>
   </header>
 
   <main>
     <h2>Games Gallery</h2>
-    <div id="gallery">
-      <figure>
-        <video src="videos/Games_1.mp4" autoplay muted loop playsinline></video>
-        <figcaption>Game 1</figcaption>
-      </figure>
-      <figure>
-        <video src="videos/Art_2.mov" autoplay muted loop playsinline></video>
-        <figcaption>Game 2</figcaption>
-      </figure>
-      <figure>
-        <video src="videos/Game_3.mov" autoplay muted loop playsinline></video>
-        <figcaption>Game 3</figcaption>
-      </figure>
-    </div>
+
+    <section class="game-section">
+      <video class="game-video" src="Images/Games_1.mp4" controls></video>
+      <p class="game-description">
+        <strong>Game 1:</strong> This game is a narrative-driven puzzle adventure where the player explores a surreal world and solves challenging environmental puzzles.
+      </p>
+    </section>
+
+    <section class="game-section">
+      <video class="game-video" src="Images/Game_3.mov" controls></video>
+      <p class="game-description">
+        <strong>Game 2:</strong> An action-platformer featuring fluid parkour mechanics, dynamic enemies, and a dystopian sci-fi aesthetic.
+      </p>
+    </section>
+
+    <section class="game-section">
+      <video class="game-video" src="videos/Game_3.mp4" controls></video>
+      <p class="game-description">
+        <strong>Game 3:</strong> A cozy simulation game focused on managing an intergalactic café and building relationships with unique characters.
+      </p>
+    </section>
+
+    <!-- Add more games below as needed -->
   </main>
 
   <footer>

@@ -34,6 +34,8 @@
 * {
   box-sizing: border-box;
   max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -79,6 +81,7 @@ header {
 /* Navigation */
 nav {
   padding-top: var(--spacing);
+  text-align: center;
 }
 nav a {
   padding: 8px 12px;
@@ -108,27 +111,19 @@ nav a:hover::after {
 }
 
 /* Headings */
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-family: var(--titlefont);
   text-align: center;
   line-height: 1.3em;
   margin: 1.5em auto;
 }
-
-h2 {
-  color: var(--accent-light);
-}
-
+h2 { color: var(--accent-light); }
 h3 {
   color: var(--text);
   background: linear-gradient(90deg, var(--accent), var(--accent-dark));
   padding: 5px;
   border-radius: var(--border-radius);
 }
-
 h4 {
   color: var(--accent-dark);
   background-color: var(--accent-light);
@@ -150,17 +145,9 @@ a:hover {
 }
 
 /* Lists */
-ol,
-ul {
-  margin: var(--spacing);
-}
-li {
-  padding-left: var(--halfspacing);
-  margin: var(--halfspacing) auto;
-}
-li::marker {
-  color: var(--accent);
-}
+ol, ul { margin: var(--spacing); }
+li { padding-left: var(--halfspacing); margin: var(--halfspacing) auto; }
+li::marker { color: var(--accent); }
 
 /* Blockquote */
 blockquote {
@@ -171,16 +158,12 @@ blockquote {
   font-style: italic;
 }
 
-/* Gallery */
+/* Gallery & Boxes */
 #gallery {
   margin: var(--doublespacing) auto;
   text-align: center;
   line-height: 1.2em;
   font-size: 0.9em;
-}
-#gallery.columns {
-  columns: var(--minimum-img-width) var(--maximum-columns);
-  column-gap: var(--column-gap);
 }
 figure {
   display: inline-block;
@@ -208,8 +191,6 @@ figure:hover {
   border-radius: var(--border-radius);
   cursor: pointer;
 }
-
-/* Boxes & flex */
 .box {
   padding: var(--spacing);
   border: var(--border);
@@ -227,13 +208,8 @@ figure:hover {
   flex-wrap: wrap;
   gap: var(--halfspacing) var(--spacing);
 }
-.flex > * {
-  flex: 1 2 200px;
-  margin: 0 auto;
-}
-.center {
-  text-align: center;
-}
+.flex > * { flex: 1 2 200px; margin: 0 auto; }
+.center { text-align: center; }
 
 /* Lightbox */
 #lightbox {
@@ -242,14 +218,14 @@ figure:hover {
   inset: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0,0,0,0.9);
   justify-content: center;
   align-items: center;
   z-index: 999;
   cursor: pointer;
 }
-#lightbox img,
-#lightbox video {
+#lightbox-content img,
+#lightbox-content video {
   max-height: 90vh;
   max-width: 90vw;
   border-radius: var(--border-radius);
@@ -257,10 +233,7 @@ figure:hover {
 #lightbox video {
   background: black;
 }
-
-/* Lightbox navigation */
-#prev,
-#next {
+#prev, #next {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
@@ -273,16 +246,9 @@ figure:hover {
   z-index: 1000;
   transition: color 0.2s ease;
 }
-#prev:hover,
-#next:hover {
-  color: var(--accent-light);
-}
-#prev {
-  left: 20px;
-}
-#next {
-  right: 20px;
-}
+#prev:hover, #next:hover { color: var(--accent-light); }
+#prev { left: 20px; }
+#next { right: 20px; }
 
 /* Footer */
 footer {

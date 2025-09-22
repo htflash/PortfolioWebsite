@@ -5,6 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>2D Art - Hunter Tortorella</title>
+  <style>
+    /* Masonry gallery */
+    #gallery {
+      column-count: 3; /* number of columns */
+      column-gap: 15px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 2rem auto;
+    }
+
+    #gallery figure {
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 15px;
+      break-inside: avoid;
+      background: linear-gradient(145deg, #354f52, #2f3e46);
+      padding: 10px;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #gallery figure:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    #gallery img,
+    #gallery video {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) { #gallery { column-count: 2; } }
+    @media (max-width: 600px) { #gallery { column-count: 1; } }
+  </style>
 </head>
 <body>
   <header>
@@ -14,30 +52,79 @@
       <a href="2d.html">2D Art</a>
       <a href="3d.html">3D Art</a>
       <a href="games.html">Games</a>
+      <a href="aboutme.html">About Me</a>
     </nav>
   </header>
 
   <main>
     <h2>2D Art Gallery</h2>
-    <div id="gallery" class="columns">
+    <div id="gallery">
       <figure>
-        <img src="Images/Art_1.png" alt="2D Art 1">
+        <img src="images/Art_1.png" alt="2D Art 1">
         <figcaption>2D Art 1</figcaption>
       </figure>
       <figure>
-        <video src="Images/Art_2.PNG" autoplay muted loop playsinline></video>
+        <video src="Images/Game_3.mov" autoplay muted loop playsinline controls></video>
         <figcaption>2D Animation</figcaption>
       </figure>
       <figure>
-        <img src="Images/Art_3.PNG" alt="2D Art 3">
+        <img src="images/Art_3.png" alt="2D Art 3">
         <figcaption>2D Art 3</figcaption>
       </figure>
-      <!-- Add more figures/videos -->
+      <figure>
+        <img src="images/Art_4.png" alt="2D Art 4">
+        <figcaption>2D Art 4</figcaption>
+      </figure>
+      <!-- Add more figures/videos as needed -->
     </div>
   </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <span id="prev">&#10094;</span>
+    <span id="next">&#10095;</span>
+    <div id="lightbox-content"></div>
+  </div>
 
   <footer>
     <p>&copy; 2025 Hunter Tortorella</p>
   </footer>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxContent = document.getElementById('lightbox-content');
+    const mediaItems = Array.from(document.querySelectorAll('#gallery img, #gallery video'));
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      const media = mediaItems[currentIndex].cloneNode(true);
+      media.removeAttribute('id');
+      media.removeAttribute('class');
+      lightboxContent.innerHTML = '';
+      lightboxContent.appendChild(media);
+      lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() { lightbox.style.display = 'none'; }
+    function showNext() { currentIndex = (currentIndex + 1) % mediaItems.length; openLightbox(currentIndex); }
+    function showPrev() { currentIndex = (currentIndex - 1 + mediaItems.length) % mediaItems.length; openLightbox(currentIndex); }
+
+    mediaItems.forEach((media, i) => { media.addEventListener('click', () => openLightbox(i)); });
+    lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
+    next.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+    prev.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.style.display === 'flex') {
+        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'Escape') closeLightbox();
+      }
+    });
+  </script>
 </body>
 </html>

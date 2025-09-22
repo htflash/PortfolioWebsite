@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me - Hunter Tortorella</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #2f3e46 0%, #354f52 100%);
+    color: #cad2c5;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(90deg, #52796f, #84a98c);
+  }
+
+  header h1 {
+    font-family: monospace;
+    margin: 0.5rem 0;
+    font-size: 2.5rem;
+  }
+
+  header nav {
+    margin-top: 1rem;
+  }
+
+  header nav a {
+    text-decoration: none;
+    color: #cad2c5;
+    font-weight: bold;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s;
+  }
+
+  header nav a:hover {
+    color: #cb78ac;
+  }
+
+  main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #cb78ac;
+  }
+
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .about-image {
+    flex: 1 1 300px;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s, filter 0.3s;
+  }
+
+  .about-image:hover {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+  }
+
+  .about-text {
+    flex: 2 1 400px;
+    font-size: 1.1rem;
+    line-height: 1.6em;
+  }
+
+  .skills {
+    margin-top: 2rem;
+  }
+
+  .skills h3 {
+    text-align: center;
+    color: #84a98c;
+    margin-bottom: 1rem;
+  }
+
+  .skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .skills li {
+    background: linear-gradient(145deg, #354f52, #2f3e46);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    border: 1px solid #84a98c;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .skills li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(90deg, #52796f, #84a98c);
+    color: #cad2c5;
+    border-top: 2px solid #cb78ac;
+    margin-top: 3rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1><a href="index.html">Hunter Tortorella</a></h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="2d.html">2D Art</a>
+    <a href="3d.html">3D Art</a>
+    <a href="games.html">Games</a>
+    <a href="about.html">About Me</a>
+  </nav>
+</header>
+
+<main>
+  <h2>About Me</h2>
+  <div class="about-container">
+    <img src="Images/Portrait.png" alt="Hunter Tortorella" class="about-image">
+    <div class="about-text">
+      <p>Hi! I'm Hunter Tortorella, an indie game developer and digital artist based in New Haven, Connecticut. I specialize in creating emotionally immersive 2D and 3D art, blending stylized visuals with narrative-driven gameplay. My work focuses on exploring mental health awareness and human connection through interactive experiences.</p>
+      <p>I enjoy experimenting with hybrid 2D/3D workflows, interactive storytelling, and building games that challenge players while leaving an emotional impact. When I’m not working on games, you can find me exploring visual design, pixel art, or researching the latest game engine technologies.</p>
+    </div>
+  </div>
+
+  <div class="skills">
+    <h3>Skills & Interests</h3>
+    <ul>
+      <li>Unity</li>
+      <li>Unreal Engine</li>
+      <li>3D Modeling & Sculpting</li>
+      <li>2D Pixel Art</li>
+      <li>Narrative Design</li>
+      <li>Animation</li>
+      <li>Sound Design</li>
+      <li>Interactive Storytelling</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Hunter Tortorella</p>
+</footer>
+
+</body>
+</html>

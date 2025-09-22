@@ -5,6 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>3D Art - Hunter Tortorella</title>
+  <style>
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 5%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #cb78ac; /* accent-light */
+      margin-bottom: 2rem;
+    }
+
+    .model-section {
+      margin-bottom: 3rem;
+      padding: 20px;
+      border-radius: 12px;
+      background: linear-gradient(145deg, #354f52, #2f3e46);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #84a98c; /* accent */
+    }
+
+    .section-description {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #cad2c5; /* text color */
+    }
+
+    .model-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .model-gallery img,
+    .model-gallery video {
+      width: calc(25% - 15px);
+      border-radius: 12px;
+      cursor: pointer;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .model-gallery img:hover,
+    .model-gallery video:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 1000px) { 
+      .model-gallery img, .model-gallery video { width: calc(50% - 15px); } 
+    }
+    @media (max-width: 600px) { 
+      .model-gallery img, .model-gallery video { width: 100%; } 
+    }
+
+    hr {
+      border: 1px solid #84a98c;
+      margin: 3rem 0;
+      opacity: 0.5;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -14,33 +83,125 @@
       <a href="2d.html">2D Art</a>
       <a href="3d.html">3D Art</a>
       <a href="games.html">Games</a>
+      <a href="aboutme.html">About Me</a>
     </nav>
   </header>
 
   <main>
     <h2>3D Art Gallery</h2>
-    <div id="gallery" class="columns">
-      <figure>
-        <img src="Images/3d_1.png" alt="3D Art 1">
-        <figcaption>3D Art 1</figcaption>
-      </figure>
-      <figure>
-        <img src="Images/3d_2.png" alt="3D Art 2">
-        <figcaption>3D Art 3</figcaption>
-      </figure>
-      <figure>
-        <video src="Images/3d_3.mp4" autoplay muted loop playsinline></video>
-        <figcaption>3D Art 2</figcaption>
-      </figure>
-      <figure>
-        <img src="Images/3d_4.png" alt="3D Art 3">
-        <figcaption>3D Art 5</figcaption>
-      </figure>
-    </div>
+
+    <!-- Model 1 -->
+    <section class="model-section">
+      <h3 class="section-title">3D Model 1</h3>
+      <div class="model-gallery">
+        <img src="Images/3d_1.png" alt="3D Model 1 - View 1">
+        <img src="Images/3d_2.png" alt="3D Model 1 - View 2">
+        <video src="videos/3d_3.mp4" autoplay muted loop playsinline></video>
+        <img src="Images/3d_4.png" alt="3D Model 1 - View 3">
+        <img src="Images/3d_4.png" alt="3D Model 1 - View 3">
+      </div>
+      </div>
+      </section>
+      <p class="section-description">This model is a futuristic mech character with multiple angles and a short animation showcasing its articulation.</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Model 2 -->
+    <section class="model-section">
+      <h3 class="section-title">3D Model 2</h3>
+      <div class="model-gallery">
+        <img src="Images/3d_5.png" alt="3D Model 2 - View 1">
+        <img src="Images/3d_6.png" alt="3D Model 2 - View 2">
+        <img src="Images/3d_7.png" alt="3D Model 2 - View 3">
+        <video src="videos/3d_8.mp4" autoplay muted loop playsinline></video>
+      </div>
+      </div>
+      </section>
+      <p class="section-description">A stylized sci-fi vehicle, shown from different angles to highlight textures and lighting effects in the render.</p>
+    </section>
+
+    <hr>
+        <!-- Model 2 -->
+    <section class="model-section">
+      <h3 class="section-title">3D Model 2</h3>
+      <div class="model-gallery">
+        <img src="Images/3d_5.png" alt="3D Model 2 - View 1">
+        <img src="Images/3d_6.png" alt="3D Model 2 - View 2">
+        <img src="Images/3d_7.png" alt="3D Model 2 - View 3">
+        <video src="videos/3d_8.mp4" autoplay muted loop playsinline></video>
+      </div>
+      </div>
+      </section>
+      <p class="section-description">A stylized sci-fi vehicle, shown from different angles to highlight textures and lighting effects in the render.</p>
+    </section>
+
+    <hr>
+        <!-- Model 2 -->
+    <section class="model-section">
+      <h3 class="section-title">3D Model 2</h3>
+      <div class="model-gallery">
+        <img src="Images/3d_5.png" alt="3D Model 2 - View 1">
+        <img src="Images/3d_6.png" alt="3D Model 2 - View 2">
+        <img src="Images/3d_7.png" alt="3D Model 2 - View 3">
+        <video src="videos/3d_8.mp4" autoplay muted loop playsinline></video>
+      </div>
+      </div>
+      </section>
+      <p class="section-description">A stylized sci-fi vehicle, shown from different angles to highlight textures and lighting effects in the render.</p>
+    </section>
+
+    <hr>
   </main>
+  
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <span id="prev">&#10094;</span>
+    <span id="next">&#10095;</span>
+    <div id="lightbox-content"></div>
+  </div>
 
   <footer>
     <p>&copy; 2025 Hunter Tortorella</p>
   </footer>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxContent = document.getElementById('lightbox-content');
+    const mediaItems = Array.from(document.querySelectorAll('.model-gallery img, .model-gallery video'));
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      const media = mediaItems[currentIndex].cloneNode(true);
+      media.removeAttribute('id');
+      media.removeAttribute('class');
+      lightboxContent.innerHTML = '';
+      lightboxContent.appendChild(media);
+      lightbox.style.display = 'flex';
+    }
+
+    function closeLightbox() { lightbox.style.display = 'none'; }
+    function showNext() { currentIndex = (currentIndex + 1) % mediaItems.length; openLightbox(currentIndex); }
+    function showPrev() { currentIndex = (currentIndex - 1 + mediaItems.length) % mediaItems.length; openLightbox(currentIndex); }
+
+    mediaItems.forEach((media, i) => { media.addEventListener('click', () => openLightbox(i)); });
+    lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
+    next.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+    prev.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.style.display === 'flex') {
+        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'Escape') closeLightbox();
+      }
+    });
+  </script>
 </body>
 </html>
