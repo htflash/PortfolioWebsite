@@ -1,0 +1,8 @@
+# wrangler.toml
+
+name = "my-cloudflare-site"         # Change this to your site name
+compatibility_date = "2025-09-22"
+
+[site]
+bucket = "./dist"                   # Path to your folder with all HTML, CSS, images, videos
+entry-point = "workers-site"

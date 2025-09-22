@@ -1,8 +1,0 @@
-# wrangler.toml
-
-name = "my-cloudflare-site"            # Change to your site name
-compatibility_date = "2025-09-22"
-
-[site]
-bucket = "./dist"                      # Path to the folder containing all static assets
-entry-point = "workers-site"           # Default for Workers Sites
