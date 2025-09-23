@@ -1,124 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Games - Hunter Tortorella</title>
-  <style>
-    main {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 5%;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Games - Hunter Tortorella</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #181818 0%, #2C2C2C 100%);
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+  }
 
-    
-    
-    h2 {
-      text-align: center;
-      color: #cb78ac; /* accent-light */
-      margin-bottom: 2rem;
-    }
+  header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(90deg, #2C2C2C, #FF5C00);
+  }
 
-    .game-section {
-      margin-bottom: 3rem;
-      background: linear-gradient(145deg, #354f52, #2f3e46);
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
+  header h1 {
+    font-family: monospace;
+    margin: 0.5rem 0;
+    font-size: 2.5rem;
+  }
 
-        .model-section {
-      margin-bottom: 3rem;
-      padding: 20px;
-      border-radius: 12px;
-      background: linear-gradient(145deg, #354f52, #2f3e46);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-    .game-video {
-      width: 100%;
-      max-height: 600px;
-      border-radius: 12px;
-      object-fit: cover;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
+  header nav {
+    margin-top: 1rem;
+  }
 
-    .game-video:hover {
-      transform: scale(1.02);
-    }
+  header nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s;
+  }
 
-    .game-description {
-      margin-top: 1rem;
-      color: #cad2c5; /* text */
-      font-size: 1rem;
-      line-height: 1.5;
-    }
+  header nav a:hover {
+    color: #e9e9e9;
+  }
 
-    /* Optional: Fullscreen button for video */
-    .game-video::-webkit-media-controls-fullscreen-button {
-      display: block;
-    }
-  </style>
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 5%;
+  }
+
+  h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 2rem;
+  }
+
+  .game-section {
+    margin-bottom: 3rem;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #2C2C2C, #FF5C00);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+
+  .game-video {
+    width: 100%;
+    max-height: 600px;
+    border-radius: 12px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .game-video:hover {
+    transform: scale(1.02);
+  }
+
+  .game-description {
+    margin-top: 1rem;
+    color: #FFFFFF;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  h2 a {
+    color: #FF7F32;
+    text-decoration: none;
+  }
+
+  h2 a:hover {
+    color: #FF5C00;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(90deg, #2C2C2C, #FF5C00);
+    color: #FFFFFF;
+    border-top: 2px solid #FF7F32;
+    margin-top: 3rem;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1><a href="index.html">Hunter Tortorella</a></h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="2d.html">2D Art</a>
-      <a href="3d.html">3D Art</a>
-      <a href="games.html">Games</a>
-      <a href="aboutme.html">About Me</a>
-    </nav>
-  </header>
 
-  <main>
-    <h2>Games Gallery</h2>
+<header>
+  <h1><a href="index.html">Hunter Tortorella</a></h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="2d.html">2D Art</a>
+    <a href="3d.html">3D Art</a>
+    <a href="games.html">Games</a>
+    <a href="aboutme.html">About Me</a>
+  </nav>
+</header>
 
-    <section class="game-section">
-      <video class="game-video" src="Videos/Games_1.mp4" controls></video>
-      <p class="game-description">
-        <strong>Whisp:</strong> Whisp is a game where you follow a child that ends up getting lost in a cave. In order to escape and find your pet, you need to dwell deeper, with a whisp as a guide. 
-      </p>
-    </section>
+<main>
+  <h2>Games Gallery</h2>
 
-    <section class="game-section">
-      <video class="game-video" src="Videos/Brego Vs. Midnight DEMO.mp4" controls></video>
-      <p class="game-description">
-        <strong>Brego Vs. Midnight</strong> A simple turn-based combat game with my pets.
-      </p>
-    </section>
+  <section class="game-section">
+    <video class="game-video" src="Videos/Games_1.mp4" controls></video>
+    <p class="game-description">
+      <strong>Whisp:</strong> Whisp is a game where you follow a child that ends up getting lost in a cave. In order to escape and find your pet, you need to delve deeper, with a whisp as a guide. 
+    </p>
+  </section>
 
-    <section class="game-section">
-      <video class="game-video" src="Videos/Game_3.mov" controls></video>
-      <p class="game-description">
-        <strong>Game 3:</strong> Defuse the Bomb simulator.
-      </p>
-    </section>
+  <section class="game-section">
+    <video class="game-video" src="Videos/Brego Vs. Midnight DEMO.mp4" controls></video>
+    <p class="game-description">
+      <strong>Brego Vs. Midnight:</strong> A simple turn-based combat game featuring my pets.
+    </p>
+  </section>
 
-    <section class="model-section">
-      <img src="Images/WhatIHaveRightNow (1).png" alt="3D Model 1 - View 1">
-      <img src="Images/Demo Room 1 (1).png" alt="Demo Room 1">
-      <img src="Images/Demo Room 2 (1).png" alt="Demo Room 2">
-      <p class="game-description">
-        <h2><a href="https://htflash1.itch.io/dont-look-down" target="_blank">Don't Look Down Itch Link</a></h2>
-        <strong>Don't Look Down</strong> Here is some work-in-progress pictures of a game I am currently working on as part of my senior project, called Don't Look Down. It's a physics-based climbing game set in a desolate, post-apocalyptic wasteland.
+  <section class="game-section">
+    <video class="game-video" src="Videos/Game_3.mov" controls></video>
+    <p class="game-description">
+      <strong>Game 3:</strong> Defuse the Bomb simulator.
+    </p>
+  </section>
 
-You play as a lone climber (and their robotic companion) who has left behind their family in pursuit of an ancient belief: climb high enough, and you may uncover the truth about the world’s destruction — and reach the gods themselves.
-      </p>
-    </section>
+  <section class="game-section">
+    <img src="Images/WhatIHaveRightNow (1).png" alt="3D Model 1 - View 1">
+    <img src="Images/Demo Room 1 (1).png" alt="Demo Room 1">
+    <img src="Images/Demo Room 2 (1).png" alt="Demo Room 2">
+    <p class="game-description">
+      <h2><a href="https://htflash1.itch.io/dont-look-down" target="_blank">Don't Look Down Itch Link</a></h2>
+      <strong>Don't Look Down:</strong> Here are some work-in-progress pictures of a game I am currently developing as part of my senior project. It's a physics-based climbing game set in a desolate, post-apocalyptic wasteland.
+      <br><br>
+      You play as a lone climber (and their robotic companion) who has left behind their family in pursuit of an ancient belief: climb high enough, and you may uncover the truth about the world’s destruction — and reach the gods themselves.
+    </p>
+  </section>
 
+</main>
 
-    
-  </main>
-
-  <footer>
+<footer>
   <p>&copy; 2025 Hunter Tortorella</p>
   <div class="social-links">
     <a href="https://www.instagram.com/htflash_/" target="_blank">Instagram</a> |
-    <a href="https://htflash1.itch.io/" target="_blank">Itch.io</a> |
-  </div>
-</footer>
-</body>
-</html>
+    <a href="h

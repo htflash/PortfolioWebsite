@@ -1,111 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>2D Art - Hunter Tortorella</title>
-  <style>
-    /* Masonry gallery */
-    #gallery {
-      column-count: 3; /* number of columns */
-      column-gap: 15px;
-      width: 100%;
-      max-width: 1200px;
-      margin: 2rem auto;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2D Art - Hunter Tortorella</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #181818 0%, #2C2C2C 100%);
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+  }
 
-    #gallery figure {
-      display: inline-block;
-      width: 100%;
-      margin: 0 0 15px;
-      break-inside: avoid;
-      background: linear-gradient(145deg, #354f52, #2f3e46);
-      padding: 10px;
-      border-radius: 12px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+  header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(90deg, #2C2C2C, #FF5C00);
+  }
 
-    #gallery figure:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
-    }
+  header h1 {
+    font-family: monospace;
+    margin: 0.5rem 0;
+    font-size: 2.5rem;
+  }
 
-    #gallery img,
-    #gallery video {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 12px;
-      cursor: pointer;
-    }
+  header nav {
+    margin-top: 1rem;
+  }
 
-    @media (max-width: 900px) { #gallery { column-count: 2; } }
-    @media (max-width: 600px) { #gallery { column-count: 1; } }
-  </style>
+  header nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s;
+  }
+
+  header nav a:hover {
+    color: #e2e2e2;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 2rem;
+  }
+
+  /* Masonry gallery */
+  #gallery {
+    column-count: 3;
+    column-gap: 15px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #gallery figure {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 15px;
+    break-inside: avoid;
+    background: linear-gradient(145deg, #2C2C2C, #FF5C00);
+    padding: 10px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #gallery figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+  }
+
+  #gallery img,
+  #gallery video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 900px) { #gallery { column-count: 2; } }
+  @media (max-width: 600px) { #gallery { column-count: 1; } }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(90deg, #2C2C2C, #FF5C00);
+    color: #FFFFFF;
+    border-top: 2px solid #FF7F32;
+    margin-top: 3rem;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1><a href="index.html">Hunter Tortorella</a></h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="2d.html">2D Art</a>
-      <a href="3d.html">3D Art</a>
-      <a href="games.html">Games</a>
-      <a href="aboutme.html">About Me</a>
-    </nav>
-  </header>
 
-  <main>
-    <h2>2D Art Gallery</h2>
-    <div id="gallery">
-      <figure>
-        <img src="Images/Art_1.png" alt="Art_1">
-        <figcaption>Sensory Desensitization</figcaption>
-      </figure>
-      <figure>
-        <img src="Images/Art_2.PNG" alt="Art_2">
-        <figcaption>2d Commission</figcaption>
-      </figure>
-      <figure>
-        <img src="Images/Art_3.PNG" alt="Art_3">
-        <figcaption>Howl from Howls Moving Castle</figcaption>
-      </figure>
-      </figure>
-      <figure>
-        <img src="Images/Art_5.png" alt="Art_5">
-        <figcaption>Untitled</figcaption>
-      </figure>
-      <figure>
-        <img src="Images/Art_6.png" alt="Art_6">
-        <figcaption>Untitled</figcaption>
-      </figure>
-      </figure>
-      <figure>
-        <img src="Images/Art_9.png" alt="Art_9">
-        <figcaption>Untitled</figcaption>
-      </figure>
-      <figure>
-        <img src="Images/Art_10.png" alt="Art_10">
-        <figcaption>Untitled</figcaption>
-      </figure>
-      <figure>
-        <img src="Images/Art_11.png" alt="Art_11">
-        <figcaption>Untitled</figcaption>
-      </figure>
-      
+<header>
+  <h1><a href="index.html">Hunter Tortorella</a></h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="2d.html">2D Art</a>
+    <a href="3d.html">3D Art</a>
+    <a href="games.html">Games</a>
+    <a href="aboutme.html">About Me</a>
+  </nav>
+</header>
 
-
-
-    </div>
-  </main>
-
-  <!-- Lightbox -->
-  <div id="lightbox">
-    <span id="prev">&#10094;</span>
-    <span id="next">&#10095;</span>
-    <div id="lightbox-content"></div>
+<main>
+  <h2>2D Art Gallery</h2>
+  <div id="gallery">
+    <figure>
+      <img src="Images/Art_1.png" alt="Art_1">
+      <figcaption>Sensory Desensitization</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Art_2.PNG" alt="Art_2">
+      <figcaption>2D Commission</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Art_3.PNG" alt="Art_3">
+      <figcaption>Howl from Howl's Moving Castle</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Art_5.png" alt="Art_5">
+      <figcaption>Untitled</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Art_6.png" alt="Art_6">
+      <figcaption>Untitled</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Art_9.png" alt="Art_9">
+      <figcaption>Untitled</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Art_10.png" alt="Art_10">
+      <figcaption>Untitled</figcaption>
+    </figure>
+    <figure>
+      <img src="Images/Art_11.png" alt="Art_11">
+      <figcaption>Untitled</figcaption>
+    </figure>
   </div>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span id="prev">&#10094;</span>
+  <span id="next">&#10095;</span>
+  <div id="lightbox-content"></div>
+</div>
 
 <footer>
   <p>&copy; 2025 Hunter Tortorella</p>
@@ -115,43 +168,42 @@
   </div>
 </footer>
 
-  <script>
-    const lightbox = document.getElementById('lightbox');
-    const lightboxContent = document.getElementById('lightbox-content');
-    const mediaItems = Array.from(document.querySelectorAll('#gallery img, #gallery video'));
-    const prev = document.getElementById('prev');
-    const next = document.getElementById('next');
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxContent = document.getElementById('lightbox-content');
+  const mediaItems = Array.from(document.querySelectorAll('#gallery img, #gallery video'));
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
 
-    let currentIndex = 0;
+  let currentIndex = 0;
 
-    function openLightbox(index) {
-      currentIndex = index;
-      const media = mediaItems[currentIndex].cloneNode(true);
-      media.removeAttribute('id');
-      media.removeAttribute('class');
-      lightboxContent.innerHTML = '';
-      lightboxContent.appendChild(media);
-      lightbox.style.display = 'flex';
+  function openLightbox(index) {
+    currentIndex = index;
+    const media = mediaItems[currentIndex].cloneNode(true);
+    media.removeAttribute('id');
+    media.removeAttribute('class');
+    lightboxContent.innerHTML = '';
+    lightboxContent.appendChild(media);
+    lightbox.style.display = 'flex';
+  }
+
+  function closeLightbox() { lightbox.style.display = 'none'; }
+  function showNext() { currentIndex = (currentIndex + 1) % mediaItems.length; openLightbox(currentIndex); }
+  function showPrev() { currentIndex = (currentIndex - 1 + mediaItems.length) % mediaItems.length; openLightbox(currentIndex); }
+
+  mediaItems.forEach((media, i) => { media.addEventListener('click', () => openLightbox(i)); });
+  lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
+  next.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+  prev.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.style.display === 'flex') {
+      if (e.key === 'ArrowRight') showNext();
+      if (e.key === 'ArrowLeft') showPrev();
+      if (e.key === 'Escape') closeLightbox();
     }
-
-    function closeLightbox() { lightbox.style.display = 'none'; }
-    function showNext() { currentIndex = (currentIndex + 1) % mediaItems.length; openLightbox(currentIndex); }
-    function showPrev() { currentIndex = (currentIndex - 1 + mediaItems.length) % mediaItems.length; openLightbox(currentIndex); }
-
-    mediaItems.forEach((media, i) => { media.addEventListener('click', () => openLightbox(i)); });
-    lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
-    next.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
-    prev.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
-
-    document.addEventListener('keydown', (e) => {
-      if (lightbox.style.display === 'flex') {
-        if (e.key === 'ArrowRight') showNext();
-        if (e.key === 'ArrowLeft') showPrev();
-        if (e.key === 'Escape') closeLightbox();
-      }
-    });
-  </script>
-
+  });
+</script>
 
 </body>
 </html>

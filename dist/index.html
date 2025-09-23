@@ -6,19 +6,31 @@
 <title>Hunter Tortorella - Portfolio</title>
 <link rel="stylesheet" href="style.css">
 <style>
+
+
+
+  :root {
+    --text: #ffffff;
+    --text-secondary: #cccccc;
+    --background: #181818;
+    --accent-dark: #2c2c2c;
+    --accent: #ff5c00;
+    --accent-light: #ff7f32;
+  }
+
   body {
     font-family: "Segoe UI", sans-serif;
-    background: linear-gradient(135deg, #2f3e46 0%, #354f52 100%);
-    color: #cad2c5;
+    background: var(--background);
+    color: var(--text);
     margin: 0;
     padding: 0;
   }
 
-  header {
+header {
     text-align: center;
     padding: 2rem 1rem;
-    background: linear-gradient(90deg, #52796f, #84a98c);
-  }
+    background: linear-gradient(90deg, #2C2C2C, #FF5C00);
+}
 
   #header-art {
     max-width: 100%;
@@ -26,7 +38,7 @@
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
     margin-bottom: 1rem;
-    transition: transform 0.5s ease, filter 0.5s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
   }
 
   #header-art:hover {
@@ -40,41 +52,45 @@
     font-size: 2.5rem;
   }
 
+  header h1 a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+
   header nav {
     margin-top: 1rem;
   }
 
   header nav a {
     text-decoration: none;
-    color: #cad2c5;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     margin: 0 10px;
-    position: relative;
     transition: color 0.3s;
   }
 
   header nav a:hover {
-    color: #cb78ac;
+    color: #333333;
   }
 
   main {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
+    text-align: center;
   }
 
   main h2 {
-    text-align: center;
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #cb78ac;
+    color: var(--accent);
   }
 
   main p {
-    text-align: center;
     font-size: 1.1rem;
     margin-bottom: 2rem;
     line-height: 1.5em;
+    color: var(--text-secondary);
   }
 
   .flex {
@@ -85,7 +101,7 @@
   }
 
   .box {
-    background: linear-gradient(145deg, #354f52, #2f3e46);
+    background: var(--accent-dark);
     padding: 1rem;
     border-radius: 12px;
     flex: 1 1 300px;
@@ -102,24 +118,23 @@
 
   .box h3 {
     margin: 0.5rem 0;
-    color: #84a98c;
+    color: var(--accent-light);
   }
 
   .box p a {
-    color: #cb78ac;
-    text-decoration: underline wavy #cb78ac;
+    color: var(--accent);
+    text-decoration: underline solid var(--accent);
     text-underline-offset: 0.2em;
     font-weight: bold;
   }
 
-  /* Hover zoom effect for images and videos */
   .box img,
   .box video {
     width: 100%;
     border-radius: 12px;
     margin-bottom: 0.5rem;
     object-fit: cover;
-    transition: transform 0.5s ease, filter 0.5s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
     cursor: pointer;
   }
 
@@ -132,9 +147,9 @@
   footer {
     text-align: center;
     padding: 1.5rem;
-    background: linear-gradient(90deg, #52796f, #84a98c);
-    color: #cad2c5;
-    border-top: 2px solid #cb78ac;
+    background: var(--accent-dark);
+    color: var(--text-secondary);
+    border-top: 2px solid var(--accent);
     margin-top: 3rem;
   }
 
@@ -144,14 +159,14 @@
 
   footer .social-links a {
     margin: 0 10px;
-    color: #cb78ac;
+    color: var(--accent);
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s;
   }
 
   footer .social-links a:hover {
-    color: #fff;
+    color: var(--accent-light);
   }
 </style>
 </head>
@@ -171,7 +186,7 @@
 
 <main>
   <h2>Welcome to My Portfolio!</h2>
-  <p>Hi! I'm Hunter Tortorella. Explore my 2D art, 3D art, and games below....</p>
+  <p>Hi! I'm Hunter Tortorella. Explore my 2D art, 3D art, and games below.</p>
 
   <div class="flex">
     <div class="box">
