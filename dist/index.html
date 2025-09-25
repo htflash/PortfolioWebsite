@@ -23,22 +23,25 @@
     padding: 0;
   }
 
-  /* --- Header --- */
-  header {
-    background: var(--accent-dark);
-    border-bottom: 3px solid var(--accent);
-    padding: 1rem 2rem;
-    top: 0;
-    z-index: 1000;
-  }
+header {
+  text-align: center;
+  padding: 0; /* remove bottom padding */
+  background: var(--accent-dark);
+}
 
-  .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.header-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--doublespacing) 2rem; /* controls height */
+  border-bottom: 4px solid var(--accent); /* yellow line under content */
+}
+
+
+
+
 
   .logo a {
     font-size: 1.8rem;
@@ -51,12 +54,13 @@
     margin-left: 1.5rem;
     text-decoration: none;
     color: var(--text);
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.3s;
   }
 
-  nav a:hover {
-    color: var(--accent-light);
+  nav a:hover,
+  nav a.active {
+    color: var(--accent);
   }
 
   /* --- Hero Section --- */
@@ -191,7 +195,6 @@
     transition: color 0.3s;
   }
 
-  
   footer .social-links a:hover {
     color: var(--accent-light);
   }

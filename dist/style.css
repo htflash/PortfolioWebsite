@@ -58,12 +58,12 @@ footer {
   margin: 0 auto;
 }
 
-/* Header */
 header {
   text-align: center;
   padding-bottom: var(--spacing);
   position: relative;
 }
+
 
 #header-art {
   width: 100%;
@@ -104,6 +104,7 @@ nav a::after {
   bottom: -2px;
   left: 0;
 }
+
 nav a:hover {
   color: var(--accent-light);
 }
