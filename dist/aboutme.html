@@ -32,7 +32,7 @@
 
   header nav a {
     text-decoration: none;
-    color: #FF7F32;
+    color: #ffffff;
     font-weight: bold;
     margin: 0 10px;
     position: relative;
@@ -40,7 +40,7 @@
   }
 
   header nav a:hover {
-    color: #FF5C00;
+    color: #ffffff;
   }
 
   main {
@@ -53,8 +53,44 @@
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #FF7F32;
+    color: #ffffff;
   }
+
+/* --- Header --- */
+header {
+  background: var(--accent-dark);
+  border-bottom: 4px solid var(--accent);
+  padding: 1rem 2rem;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--accent);
+}
+
 
   .about-container {
     display: flex;
@@ -90,7 +126,7 @@
 
   .skills h3 {
     text-align: center;
-    color: #FF5C00;
+    color: #ffffff;
     margin-bottom: 1rem;
   }
 
@@ -128,16 +164,23 @@
 </head>
 <body>
 
+<!-- Header -->
 <header>
-  <h1><a href="index.html">Hunter Tortorella</a></h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="2d.html">2D Art</a>
-    <a href="3d.html">3D Art</a>
-    <a href="games.html">Games</a>
-    <a href="aboutme.html">About Me</a>
-  </nav>
+  <div class="header-container">
+    <div class="logo">
+      <a href="index.html">Hunter Tortorella</a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="2d.html">2D Art</a>
+      <a href="3d.html">3D Art</a>
+      <a href="games.html">Games</a>
+      <a href="aboutme.html">About Me</a>
+    </nav>
+  </div>
 </header>
+
+
 
 <main>
   <h2>About Me</h2>
