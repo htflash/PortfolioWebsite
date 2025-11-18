@@ -148,6 +148,42 @@ h4 {
   display: block;
   filter: brightness(0.8);
 }
+/* Hero container matches max-width of other sections */
+.hero, .hero-container {
+  display: flex;
+  justify-content: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+}
+
+#header-art {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+#header-art:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+/* Hero text overlay */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+}
+
 
 .hero-text {
   position: absolute;
