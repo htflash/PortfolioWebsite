@@ -325,6 +325,49 @@ figure:hover {
 #prev:hover, #next:hover { color: var(--accent-light); }
 #prev { left: 20px; }
 #next { right: 20px; }
+/* Showreels Section */
+#showreels {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  gap: var(--doublespacing);
+}
+
+/* Individual showreel boxes */
+#showreels .box {
+  width: 90%;            /* take most of the available width */
+  max-width: 800px;      /* never get too wide */
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* center content */
+  padding: var(--doublespacing);
+  margin: 0 auto;
+}
+
+/* Showreel videos */
+#showreels .box video {
+  width: 100%;
+  height: auto;
+  max-height: 500px;     /* optional cap */
+  border-radius: var(--border-radius);
+  object-fit: cover;
+}
+
+/* Headings */
+#showreels .box h3 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing);
+  text-align: center;
+}
+
+/* Links */
+#showreels .box p a {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+}
+
 
 /* Footer */
 footer {
