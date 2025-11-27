@@ -123,70 +123,79 @@ header {
     color: var(--text-secondary);
   }
 
-  .flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-  }
-
-  .box {
-    background: var(--accent-dark);
-    padding: 1rem;
-    border-radius: 12px;
-    flex: 1 1 300px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    max-width: 350px;
-    overflow: hidden;
-  }
-
-  .box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
-  }
-
-  .box h3 {
-    margin: 0.5rem 0;
-    color: var(--accent-light);
-  }
-
-  .box p a {
-    color: var(--accent);
-    text-decoration: underline solid var(--accent);
-    text-underline-offset: 0.2em;
-    font-weight: bold;
-  }
-
-  .box img,
-  .box video {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 0.5rem;
-    object-fit: cover;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    cursor: pointer;
-  }
-  /* --- Boxes --- */
-.box {
-  background: linear-gradient(145deg, var(--accent-dark), #1f1f1f); /* subtle gradient */
-  padding: 1.5rem;
-  border-radius: 12px;
-  flex: 1 1 300px;
-  max-width: 350px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-  border: 2px solid var(--accent); /* accent border to match hero */
+  /* --- Flex container for all boxes --- */
+.flex {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
+/* --- Unified Box Style (clean & stable) --- */
+.box {
+  background: linear-gradient(145deg, var(--accent-dark), #1f1f1f);
+  padding: 1.5rem;
+  border-radius: 12px;
+  flex: 1 1 320px;      /* Makes all boxes stay aligned on grid */
+  max-width: 350px;    /* Prevents oversizing */
+  box-sizing: border-box;
+  text-align: center;
+  border: 2px solid var(--accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover effect */
 .box:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(0,0,0,0.5);
 }
+
+/* Media inside box */
+.box img,
+.box video {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.box img:hover,
+.box video:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Box heading */
+.box h3 {
+  margin-bottom: 1rem;
+  color: var(--accent-light);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* Box link button */
+.box p a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-top: auto;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  transition: 0.3s;
+}
+
+.box p a:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.05);
+}
+
 
 /* Box headings */
 .box h3 {
