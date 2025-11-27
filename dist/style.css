@@ -2,7 +2,6 @@
   /* Colors - Minimalist with Orange Punch */
   --text: #FFFFFF;              /* Primary text */
   --text-secondary: #737373;    /* Secondary/muted text */
-  --background: #181818;        /* Main background */
   --accent-dark: #2C2C2C;       /* Secondary background/neutral */
   --accent: #FF5C00;            /* Vibrant orange accent */
   --accent-light: #FF7F32;      /* Slightly lighter orange for hovers, highlights */
@@ -38,18 +37,24 @@
   margin: 0;
   padding: 0;
 }
+html, body {
+  height: 100%;
+  background-color: #0a0a0a;
 
-body {
-  overflow-x: hidden;
-  overflow-y: scroll;
-  padding: var(--spacing) 5%;
-  background: linear-gradient(135deg, var(--background) 0%, var(--accent-dark) 100%);
-  color: var(--text);
-  font-family: var(--basefont);
-  font-size: var(--text-size);
-  line-height: 1.5em;
-  transition: background 0.5s ease;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+
+  background-size: 3px 3px, 6px 6px, 100% 100%;
+  background-position: 0 0, 1px 1px, 0 0;
+
+  background-attachment: fixed;
 }
+
+
+
+
 
 header,
 main,
