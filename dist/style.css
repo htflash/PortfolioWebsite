@@ -51,6 +51,17 @@ html, body {
 
   background-attachment: fixed;
 }
+.elevator-pitch {
+  background: linear-gradient(145deg, #FF5C00, #2C2C2C);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin: 4rem 0;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  font-size: 1.1rem;
+  line-height: 4em;
+  
+}
+
 
 
 
