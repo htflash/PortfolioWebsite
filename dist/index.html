@@ -100,6 +100,64 @@ header {
     font-size: 1.2rem;
     color: var(--text-secondary);
   }
+  /* Dropdown Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Main Dropdown Button */
+.dropbtn {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  display: inline-block;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+
+  background: #2C2C2C;
+  border: 2px solid #FF5C00;
+  border-radius: 10px;
+
+  overflow: hidden;
+  z-index: 1000;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  margin: 0;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+/* Hover Effect */
+.dropdown-content a:hover {
+  background: #FF5C00;
+  color: white;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Highlight Main Button */
+.dropdown:hover .dropbtn {
+  color: #FF5C00;
+}
 
   /* --- Main --- */
   main {
@@ -281,8 +339,7 @@ header {
 
 
 
-<!-- Header -->
-<header>
+  <header>
   <div class="header-container">
     <div class="logo">
       <a href="index.html">Hunter Tortorella</a>
@@ -290,11 +347,20 @@ header {
     <nav>
       <a href="index.html">Home</a>
       <a href="2d.html">2D Art</a>
-      <a href="3d.html">3D Art</a>
+      <div class="dropdown">
+  <a href="3d.html" class="dropbtn">3D Art</a>
+
+  <div class="dropdown-content">
+    <a href="Props.html">Props</a>
+    <a href="Characters.html">Characters</a>
+    <a href="Enviorments.html">Enviorments</a>
+  </div>
+</div>
       <a href="games.html">Games</a>
       <a href="aboutme.html">About Me</a>
     </nav>
   </div>
+  
 </header>
 
 <!-- Hero Banner -->
@@ -349,8 +415,9 @@ header {
 <footer>
   <p>&copy; 2025 Hunter Tortorella</p>
   <div class="social-links">
+    <a href="https://www.linkedin.com/in/huntertortorella/" target="_blank">Linkedin</a> |
     <a href="https://www.instagram.com/htflash_/" target="_blank">Instagram</a> |
-    <a href="https://htflash1.itch.io/" target="_blank">Itch.io</a>
+    <a href="https://htflash1.itch.io/" target="_blank">Itch.io</a> |
   </div>
 </footer>
 

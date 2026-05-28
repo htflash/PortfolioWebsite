@@ -200,7 +200,69 @@ h4 {
   border-radius: var(--border-radius);
 }
 
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
+/* Main Button */
+.dropbtn {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* Hidden Menu */
+.dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #2C2C2C;
+  border: 2px solid #FF5C00;
+  border-radius: 12px;
+
+  min-width: 180px;
+  padding: 10px 0;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+
+  transition: all 0.25s ease;
+  z-index: 1000;
+}
+
+/* Show On Hover */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  top: 140%;
+}
+
+/* Subsection Items */
+.dropdown-content span {
+  display: block;
+  padding: 12px 18px;
+  color: white;
+  font-weight: 600;
+  cursor: default;
+  transition: background 0.25s ease;
+}
+
+/* Hover Effect */
+.dropdown-content span:hover {
+  background: #FF5C00;
+}
+
+/* Highlight Main Link */
+.dropdown:hover .dropbtn {
+  color: #FF5C00;
+}
 .hero-text {
   position: absolute;
   top: 50%;
