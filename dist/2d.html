@@ -12,7 +12,13 @@
     margin: 0;
     padding: 0;
   }
-
+  .model-section {
+    margin-bottom: 3rem;
+    padding: 20px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #2C2C2C, #FF5C00);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
   header {
     text-align: center;
     padding: 2rem 1rem;
@@ -207,6 +213,39 @@ nav a {
     </figure>
   </div>
 
+  <h2>Pixel Art</h2>
+
+   <!-- Model 1 -->
+  <section class="model-section">
+    <h3 class="section-title">Brego vs. Midnight</h3>
+    <div class="model-gallery">
+      <img src="Images/MidnightvsBregoPixelart/IMG_2337.PNG" alt="View 1">
+      <img src="Images/MidnightvsBregoPixelart/IMG_2339.jpg" alt="View 3">
+      <img src="Images/MidnightvsBregoPixelart/IMG_2345.jpg" alt="View 5">
+
+    </div>
+    <p class="section-description">Character modeled , uv unwrapped, painted and implimented into Unity3D.</p>
+    <p class="section-description">Made in Blender, Substance Painter, and 3D Coat - one 2k texture map</p>
+    <p class="section-description">Created as the main character for my University Senior Project game called "Don't Look Down"</p>
+    
+  </section>
+   <!-- Model 1 -->
+  <section class="model-section">
+    <h3 class="section-title">Whisp</h3>
+    <div class="model-gallery">
+      <img src="Images/WhispPixelArt/IMG_2346.jpg" alt="View 1">
+      <img src="Images/WhispPixelArt/IMG_2338.jpg" alt="View 1">
+      
+
+    </div>
+    <p class="section-description">Character modeled , uv unwrapped, painted and implimented into Unity3D.</p>
+    <p class="section-description">Made in Blender, Substance Painter, and 3D Coat - one 2k texture map</p>
+    <p class="section-description">Created as the main character for my University Senior Project game called "Don't Look Down"</p>
+    
+  </section>
+  
+  <hr>
+
 
 <!-- Lightbox -->
 <div id="lightbox">
@@ -224,12 +263,15 @@ nav a {
   </div>
 </footer>
 
+
+
 <script>
   const lightbox = document.getElementById('lightbox');
   const lightboxContent = document.getElementById('lightbox-content');
   const mediaItems = Array.from(document.querySelectorAll('#gallery img, #gallery video'));
   const prev = document.getElementById('prev');
   const next = document.getElementById('next');
+  
 
   let currentIndex = 0;
 
